@@ -3,18 +3,19 @@
 #include <ctime>
 #include <iostream>
 
-#include "Aficionado.cpp"
+#include "Aficionado.hpp"
 
 using namespace std;
 
 int main(int argc, char **argv)
-{ cout << "empieza" << endl;
+{ 
 	srand(time(0));
-	cout << "hola" << endl;
-	for(int i = 1; i < 10; i++){
-		Aficionado p(i);
+	for(int i = 1; i < 11; i++){
+		cout << "Aficionado " << i << ": { "; 
+		Aficionado p(i - 1);
 		p.mostrar();
-	cout << "hola" << endl;
+		cout << " } " << endl;
 	}
+	
 	return 0;
 }
