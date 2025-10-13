@@ -8,18 +8,22 @@ Pila::Pila()
 
 void Pila::insertar(int v)
 {
-	pnodoPila nuevo;
-	nuevo = new NodoPila(v,ultimo);
+	Aficionado nuevoAficionado(v);
+	cout << "Nuevo aficionado: ";  //Lineas para quitar
+    nuevoAficionado.mostrar();     //
+	pnodoPila nuevo = new NodoPila(nuevoAficionado,ultimo);
 	ultimo = nuevo;
 	longitud++;
 }
 
-int Pila::extraer()
+Aficionado Pila::extraer()
 {
 	pnodoPila nodo;
-	int v;
-	if(!ultimo)
+	Aficionado v;
+	if(!ultimo){
+		cout << "La pila esta vacia " << endl;
 		return 0;
+}
 	nodo = ultimo;
 	ultimo = nodo->siguiente;
 	v = nodo -> valor;
@@ -28,20 +32,22 @@ int Pila::extraer()
 	return v;
 }
 
-int Pila::cima()
+Aficionado Pila::cima()
 {
-	pnodoPila nodo;
-	if(!ultimo)
+//	pnodoPila nodo;
+	if(!ultimo){
+		cout << "La pila esta vacia " << endl;
 		return 0;
+	}
 	return ultimo -> valor;
 }
 
 void Pila::mostrar()
 {
 	pnodoPila aux = ultimo;
-	cout << "El contenido de la pila es: ";
+	cout << "El contenido de la pila es: " << endl;
 	while(aux){
-		cout << "-> " << aux->valor;
+		aux->valor.mostrar();
 		aux = aux->siguiente;
 	}
 	cout << endl;

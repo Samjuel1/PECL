@@ -1,6 +1,7 @@
 #ifndef PILA_HPP
 #define PILA_HPP
 #include "NodoPila.hpp"
+using namespace std;
 
 class Pila
 {
@@ -8,8 +9,8 @@ public:
 	Pila();
 	~Pila();
 	void insertar(int v);
-	int extraer();
-	int cima();
+	Aficionado extraer();
+	Aficionado cima();
 	void mostrar();
 	int getLongitud();
 	

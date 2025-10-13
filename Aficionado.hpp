@@ -11,6 +11,8 @@ using namespace std;
 class Aficionado
 {
 public:
+
+  //  Aficionado() : id(0){}
 	Aficionado(int n);
 	~Aficionado();
 	
