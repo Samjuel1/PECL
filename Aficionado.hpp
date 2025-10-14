@@ -5,6 +5,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
+#include "Gestor.hpp"
 
 using namespace std;
 
@@ -13,10 +14,10 @@ class Aficionado
 public:
 
   //  Aficionado() : id(0){}
-	Aficionado(int n);
+	Aficionado(int num[], int tamano);
 	~Aficionado();
 	
-	int generarId(int n);
+	int generarId(int num[], int tamano);
 	int generarMinuto();
 	bool comprobarSocio(int id);
 	void mostrar();

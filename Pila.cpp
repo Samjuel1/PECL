@@ -6,7 +6,7 @@ Pila::Pila()
 	longitud = 0;
 }
 
-void Pila::insertar(int v)
+void Pila::insertar(Aficionado v)
 {
 	Aficionado nuevoAficionado(v);
 	cout << "Nuevo aficionado: ";  //Lineas para quitar

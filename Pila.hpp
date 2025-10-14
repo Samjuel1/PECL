@@ -8,7 +8,7 @@ class Pila
 public:
 	Pila();
 	~Pila();
-	void insertar(int v);
+	void insertar(Aficionado v);
 	Aficionado extraer();
 	Aficionado cima();
 	void mostrar();

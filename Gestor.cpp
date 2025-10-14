@@ -1,4 +1,5 @@
 #include "Gestor.hpp"
+#include "main.cpp"
 
 Gestor::Gestor()
 {
@@ -8,12 +9,12 @@ Gestor::~Gestor()
 {
 }
 
-void eliminarElemento(int num[], int tamaño, int indice){
-	for(int i = indice; i < tamaño - 1; i++){
-		num[i] = num[i + 1]
+void eliminarElemento(int num[], int tamano, int indice){
+	for(int i = indice; i < tamano - 1; i++){
+		num[i] = num[i + 1];
 	}
 }
-void crearAficionados(int contador){
+void crearAficionados(int contador, Pila pila){
 	int num[10];
 	for (int i = 0; i < 10; i++){
 		num[i] = (contador*10 + i + 1);
@@ -22,6 +23,7 @@ void crearAficionados(int contador){
 	for (int i = 0; i < 10; i++){
 	
 		Aficionado p(num, tamano);
-		pila.insertar(p)
+		pila.insertar(p);
+		contador++;
 	}
 }

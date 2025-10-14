@@ -5,16 +5,17 @@
 
 #include "Aficionado.hpp"
 #include "Pila.hpp"
+#include "Gestor.hpp"
 
 using namespace std;
 
 int main(int argc, char **argv)
 { 
-	Pila pila;
 	srand(time(0));
+	Pila pila;
+	int contador = 0;
 	for(int i = 1; i < 11; i++){
-		pila.insertar(i - 1);
-	    pila.mostrar();
+		crearAficionados(contador,pila);
 	}
 	
 	return 0;

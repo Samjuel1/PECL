@@ -1,8 +1,9 @@
 #include "Aficionado.hpp"
+#include "Gestor.hpp"
 
-Aficionado::Aficionado(int n)
+Aficionado::Aficionado(int num[], int tamano)
 {
-	id = generarId(n);
+	id = generarId(num, tamano);
 	minutos = generarMinuto();
 	socio = comprobarSocio(this->id);
 }
@@ -11,10 +12,12 @@ Aficionado::~Aficionado()
 {
 }
 
-int Aficionado::generarId(int n){
+int Aficionado::generarId(int num[], int tamano){
 	int random;
-		random = (n*10 + 1) +(rand() % 10);		
-	return random;
+	random = rand() % tamano;
+    int idf = num[random];
+    eliminarElemento(num, tamano, random);		
+	return idf;
 	}
 
 int Aficionado::generarMinuto(){
@@ -32,3 +35,9 @@ void Aficionado::mostrar(){
 	<< ". Minuto: " << this->minutos
 	<< ". Socio: " << (this->socio ? "Si. " : "No. ") << endl;
 	}
+	
+	/*int Aficionado::generarId(int n){
+	int random;
+		random = (n*10 + 1) +(rand() % 10);		
+	return random;
+	}*/
