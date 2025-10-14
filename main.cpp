@@ -16,6 +16,8 @@ int main(int argc, char **argv)
 		pila.insertar(i - 1);
 	    pila.mostrar();
 	}
+	pila.extraer();
+	pila.mostrar();
 	
 	return 0;
 	/*cout << "Aficionado " << i << ": { "; 
