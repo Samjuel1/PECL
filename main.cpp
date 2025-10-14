@@ -14,9 +14,7 @@ int main(int argc, char **argv)
 	srand(time(0));
 	Pila pila;
 	int contador = 0;
-	for(int i = 1; i < 11; i++){
-		crearAficionados(contador,pila);
-	}
+	crearAficionados(contador,pila);
 	
 	return 0;
 	/*cout << "Aficionado " << i << ": { "; 

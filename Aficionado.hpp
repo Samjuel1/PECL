@@ -9,11 +9,12 @@
 
 using namespace std;
 
+class NodoPila;
+
 class Aficionado
 {
 public:
-
-  //  Aficionado() : id(0){}
+	Aficionado();
 	Aficionado(int num[], int tamano);
 	~Aficionado();
 	

@@ -1,11 +1,16 @@
 #include "Aficionado.hpp"
-#include "Gestor.hpp"
+#include "NodoPila.hpp"
 
 Aficionado::Aficionado(int num[], int tamano)
 {
 	id = generarId(num, tamano);
 	minutos = generarMinuto();
 	socio = comprobarSocio(this->id);
+}
+Aficionado::Aficionado(){
+	int id = 0;
+	int minutos = 0;
+	bool socio = false;
 }
 
 Aficionado::~Aficionado()

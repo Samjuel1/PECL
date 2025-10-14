@@ -1,5 +1,5 @@
 #include "Gestor.hpp"
-#include "main.cpp"
+#include "Pila.hpp"
 
 Gestor::Gestor()
 {

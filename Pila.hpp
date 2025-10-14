@@ -1,6 +1,10 @@
 #ifndef PILA_HPP
 #define PILA_HPP
 #include "NodoPila.hpp"
+#include "Aficionado.hpp"
+
+class Gestor;
+
 using namespace std;
 
 class Pila

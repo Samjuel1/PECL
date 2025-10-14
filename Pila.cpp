@@ -22,7 +22,7 @@ Aficionado Pila::extraer()
 	Aficionado v;
 	if(!ultimo){
 		cout << "La pila esta vacia " << endl;
-		return 0;
+		return Aficionado();
 }
 	nodo = ultimo;
 	ultimo = nodo->siguiente;
@@ -37,7 +37,7 @@ Aficionado Pila::cima()
 //	pnodoPila nodo;
 	if(!ultimo){
 		cout << "La pila esta vacia " << endl;
-		return 0;
+		return Aficionado();
 	}
 	return ultimo -> valor;
 }
