@@ -32,3 +32,7 @@ void Aficionado::mostrar(){
 	<< ". Minuto: " << this->minutos
 	<< ". Socio: " << (this->socio ? "Si. " : "No. ") << endl;
 	}
+	
+bool Aficionado::getSocio(){
+	return this->socio;
+}

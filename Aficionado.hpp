@@ -20,6 +20,7 @@ public:
 	int generarMinuto();
 	bool comprobarSocio(int id);
 	void mostrar();
+	bool getSocio();
 
 private:
 int id;

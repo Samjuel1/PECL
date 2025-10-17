@@ -6,7 +6,7 @@ Cola::Cola()
 	ultimo = NULL;
 	longitud = 0;
 }
-void Cola::insertar(int v)
+void Cola::insertar(Aficionado v)
 {
 	pnodoCola nuevo;
 	nuevo = new NodoCola(v);
@@ -22,17 +22,17 @@ void Cola::insertar(int v)
 void Cola::mostrar()
 {
 	pnodoCola aux = primero;
-	cout << "El contenido de la cola es: ";
+	cout << endl;
 	while(aux) {
-		cout << "-> " << aux->valor;
+		aux->valor.mostrar();
 		aux = aux->siguiente;
 	}
 	cout << endl;
 }
-int Cola::eliminar()
+Aficionado Cola::eliminar()
 {
 	pnodoCola nodo;
-	int v;
+	Aficionado v;
 	nodo = primero;
 	if(!nodo)
 		return 0;
@@ -44,7 +44,7 @@ int Cola::eliminar()
 	longitud--;
 	return v;
 }
-int Cola::verPrimero(){
+Aficionado Cola::verPrimero(){
 	return primero->valor;
 }
 

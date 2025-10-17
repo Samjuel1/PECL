@@ -7,6 +7,8 @@ public:
 	Lista();
 	~Lista();
 
+
+
 };
 
 #endif // LISTA_HPP

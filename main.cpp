@@ -5,23 +5,55 @@
 
 #include "Aficionado.hpp"
 #include "Pila.hpp"
+#include "Cola.hpp"
+#include "Gestor.hpp"
 
 using namespace std;
 
 int main(int argc, char **argv)
 { 
+	char opcion;
+
 	Pila pila;
+	Cola cola_soc;
+	Cola cola_sim;
+	Gestor gestor;
+	
+	do{
+	
 	srand(time(0));
-	for(int i = 1; i < 11; i++){
-		pila.insertar(i - 1);
-	    pila.mostrar();
+		cout << "Indique la opcion deseada: " << endl;
+		cin >> opcion;
+		opcion = toupper(opcion);
+		
+/*	switch (opcion){
+		case 'A':
+			
+		}*/
+		for(int i = 1; i < 11; i++){
+			pila.insertar(i - 1);
+			pila.mostrar();
+		//	break;
+		}	
+		
+	
+	
+	for (int i = 1; i < 11; i++){
+		Aficionado aux = pila.extraer();
+		if (aux.getSocio()){
+		cola_soc.insertar(aux);
+	} else{
+		cola_sim.insertar(aux);
 	}
-	pila.extraer();
-	pila.mostrar();
+	}
+	cout << endl;
+	cout << "El contenido de la cola de socios es: " << endl;
+	cola_soc.mostrar();
+	cout << "El contenido de la cola de simpatizantes es: " << endl;
+	cola_sim.mostrar();
+	
+	} while (opcion!= 'S');
 	
 	return 0;
-	/*cout << "Aficionado " << i << ": { "; 
-		Aficionado p(i - 1);
-		p.mostrar();
-		cout << " } " << endl;*/
+	
 }
