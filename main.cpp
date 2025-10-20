@@ -33,12 +33,13 @@ int main(int argc, char **argv)
 					pila.insertar(i - 1);
 				}
 			case 'B':
-				pila.mostrar();
+				gestor.opcionB(pila);
 				break;
 			case 'C':
 				cout << "Vacio" << endl;
 				break;
 			case 'D':
+            /*
 				for (int i = 1; i < 11; i++){
 					Aficionado aux = pila.extraer();
 					if (aux.getSocio()){
@@ -49,14 +50,22 @@ int main(int argc, char **argv)
 					}
 				}
 				cout << "Se han insertado los elementos en la cola correctamente. " << endl;
+                 */
+                 gestor.opcionD(cola_soc, cola_sim, pila);
 				break;
 			case 'E':
+            /*
 				cout << "El contenido de la cola de socios es: " << endl;
 				cola_soc.mostrar();
+                 */
+                 gestor.opcionE_F(cola_soc, "socio");
 				break;
 			case 'F':
+            /*
 				cout << "El contenido de la cola de simpatizantes es: " << endl;
 				cola_sim.mostrar();
+                 */
+                 gestor.opcionE_F(cola_sim, "simpatizante");
 				break;
 			case 'G':
 				cout << "Vacio" << endl;
