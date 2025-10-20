@@ -36,3 +36,7 @@ void Aficionado::mostrar(){
 bool Aficionado::getSocio(){
 	return this->socio;
 }
+
+int Aficionado::getId(){
+	return this->id;
+}

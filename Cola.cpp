@@ -35,7 +35,7 @@ Aficionado Cola::eliminar()
 	Aficionado v;
 	nodo = primero;
 	if(!nodo)
-		return 0;
+		return Aficionado();
 	primero = nodo->siguiente;
 	v = nodo->valor;
 	delete nodo;
