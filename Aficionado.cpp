@@ -1,28 +1,20 @@
 #include "Aficionado.hpp"
-#include "NodoPila.hpp"
 
-Aficionado::Aficionado(int num[], int tamano)
+Aficionado::Aficionado(int n)
 {
-	id = generarId(num, tamano);
+	id = generarId(n);
 	minutos = generarMinuto();
 	socio = comprobarSocio(this->id);
-}
-Aficionado::Aficionado(){
-	int id = 0;
-	int minutos = 0;
-	bool socio = false;
 }
 
 Aficionado::~Aficionado()
 {
 }
 
-int Aficionado::generarId(int num[], int tamano){
+int Aficionado::generarId(int n){
 	int random;
-	random = rand() % tamano;
-    int idf = num[random];
-    eliminarElemento(num, tamano, random);		
-	return idf;
+		random = (n*10 + 1) +(rand() % 10);		
+	return random;
 	}
 
 int Aficionado::generarMinuto(){
@@ -41,8 +33,6 @@ void Aficionado::mostrar(){
 	<< ". Socio: " << (this->socio ? "Si. " : "No. ") << endl;
 	}
 	
-	/*int Aficionado::generarId(int n){
-	int random;
-		random = (n*10 + 1) +(rand() % 10);		
-	return random;
-	}*/
+bool Aficionado::getSocio(){
+	return this->socio;
+}

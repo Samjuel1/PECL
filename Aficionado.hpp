@@ -5,23 +5,22 @@
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
-#include "Gestor.hpp"
 
 using namespace std;
-
-class NodoPila;
 
 class Aficionado
 {
 public:
-	Aficionado();
-	Aficionado(int num[], int tamano);
+
+    Aficionado() : id(0){}
+	Aficionado(int n);
 	~Aficionado();
 	
-	int generarId(int num[], int tamano);
+	int generarId(int n);
 	int generarMinuto();
 	bool comprobarSocio(int id);
 	void mostrar();
+	bool getSocio();
 
 private:
 int id;

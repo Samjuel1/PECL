@@ -1,17 +1,18 @@
 #ifndef GESTOR_HPP
 #define GESTOR_HPP
+
 #include "Aficionado.hpp"
-#include "Pila.hpp"
-#include <cstdlib>
+#include "Cola.hpp"
 
 class Gestor
 {
 public:
 	Gestor();
 	~Gestor();
-	void crearAficionados(int contador, Pila pila);
-	void eliminarElemento(int num, int tamano, int random);
-	int contadorA = 0;
+	
+	void determinarCola(Aficionado v, Cola cola_soc, Cola cola_sim);
+	
+
 };
 
 #endif // GESTOR_HPP

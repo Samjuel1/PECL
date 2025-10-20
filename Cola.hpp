@@ -8,10 +8,10 @@ public:
 	Cola();
 	~Cola();
 	
-	void insertar(int v);
-	int eliminar();
+	void insertar(Aficionado v);
+	Aficionado eliminar();
 	void mostrar();
-	int verPrimero();
+	Aficionado verPrimero();
 	
 private:
 	pnodoCola primero, ultimo;

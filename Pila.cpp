@@ -28,6 +28,8 @@ Aficionado Pila::extraer()
 	ultimo = nodo->siguiente;
 	v = nodo -> valor;
 	longitud--;
+	cout << "Se ha extraido a: ";
+	v.mostrar();
 	delete nodo;
 	return v;
 }
