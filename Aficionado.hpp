@@ -21,7 +21,7 @@ public:
 	bool comprobarSocio(int id);
 	void mostrar();
 	bool getSocio();
-    int getMinutos();
+	int getId();
 
 private:
 int id;

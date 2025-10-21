@@ -37,6 +37,6 @@ bool Aficionado::getSocio(){
 	return this->socio;
 }
 
-int Aficionado::getMinutos(){
-    return this->minutos;
+int Aficionado::getId(){
+	return this->id;
 }

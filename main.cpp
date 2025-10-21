@@ -38,7 +38,10 @@ int main(int argc, char **argv)
 				gestor.opcionB(pila);
 				break;
 			case 'C':
-				cout << "Vacio" << endl;
+				while (pila.extraer().getId() != 0){
+					continue;
+					}
+				cout << "Usuarios eliminados de la pila correctamente. " << endl;
 				break;
 			case 'D':
             /*
@@ -70,7 +73,10 @@ int main(int argc, char **argv)
                  gestor.opcionE_F(cola_sim, "simpatizante");
 				break;
 			case 'G':
-				cout << "Vacio" << endl;
+				while (cola_soc.eliminar().getId() != 0 || cola_sim.eliminar().getId() != 0){
+					continue;
+				}
+				cout << "Usuarios eliminados de las colas correctamente. " << endl;
 				break;
 			case 'H':
 				cout << "Vacio" << endl;
