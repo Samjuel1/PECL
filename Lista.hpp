@@ -9,6 +9,7 @@ public:
 	Lista();
 	~Lista();
     void insertarOrdenado(Aficionado v);
+    void mostrarLista();
     
 private:
     pnodoLista raiz;

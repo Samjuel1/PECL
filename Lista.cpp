@@ -37,5 +37,16 @@ void Lista::insertarOrdenado(Aficionado v){
     }
 }
 
+void Lista::mostrarLista(){
+    cout << endl;
+	pnodoLista aux = raiz;
+	while(aux) {
+		aux->valor.mostrar();
+		aux = aux->siguiente;
+	}
+	cout << endl;
+}
+
+
 
 

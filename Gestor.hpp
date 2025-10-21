@@ -6,6 +6,7 @@
 #include "Aficionado.hpp"
 #include "Cola.hpp"
 #include "Pila.hpp"
+#include "Lista.hpp"
 
 using namespace std;
 
@@ -20,6 +21,7 @@ public:
     void opcionB(Pila& pila);
     void opcionD(Cola& cola_soc, Cola& cola_sim, Pila& pila);
     void opcionE_F(Cola& cola, string texto);
+    void opcionH(Cola& cola_soc, Cola& cola_sim, Lista& lista);
 	
 
 };

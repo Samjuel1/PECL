@@ -43,3 +43,16 @@ void Gestor::opcionE_F(Cola& cola, string texto){
     cout << "El contenido de la cola de " << texto << "s " << "es: " << endl;
     cola.mostrar();
 }
+
+void Gestor::opcionH(Cola& cola_soc, Cola& cola_sim, Lista& lista){
+    while (cola_soc.getLongitud() > 0){
+        lista.insertarOrdenado(cola_soc.eliminar());
+    }
+    cout << "se ha completado el comando para la cola de socios" << endl;
+    
+    while (cola_sim.getLongitud() > 0){
+        lista.insertarOrdenado(cola_sim.eliminar());
+    }
+    cout << "se ha completado el comando para la cola de simpatizantes" << endl;
+    lista.mostrarLista();
+}
