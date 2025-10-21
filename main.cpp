@@ -7,6 +7,7 @@
 #include "Pila.hpp"
 #include "Cola.hpp"
 #include "Gestor.hpp"
+#include "Lista.hpp"
 
 using namespace std;
 
@@ -18,6 +19,7 @@ int main(int argc, char **argv)
 	Cola cola_soc;
 	Cola cola_sim;
 	Gestor gestor;
+    Lista lista;
 	srand(time(0));
 	
 	do{
@@ -77,7 +79,8 @@ int main(int argc, char **argv)
 				cout << "Vacio" << endl;
 				break;
 			case 'J':
-				cout << "Vacio" << endl;
+				lista.insertarOrdenado(cola_sim.eliminar());
+                cout << "se ha completado el comando" << endl;
 				break;
 			case 'K':
 				system("cls");
