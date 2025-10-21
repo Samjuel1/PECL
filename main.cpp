@@ -79,31 +79,22 @@ int main(int argc, char **argv)
 				cout << "Usuarios eliminados de las colas correctamente. " << endl;
 				break;
 			case 'H':
-				cout << "Vacio" << endl;
+                cout << "Vacio" << endl;
 				break;
 			case 'I':
-				cout << "Vacio" << endl;
+				lista.mostrarLista(); 
 				break;
 			case 'J':
-                gestor.opcionH(cola_soc, cola_sim, lista);
+                cout << "Vacio" << endl;
 				break;
 			case 'K':
 				system("cls");
 				break;
-				
-				
-			
-				
-				
-			
 			case 'N':
 				for(int i = 1; i < 11; i++){
 					pila.insertar(i - 1);
 					pila.mostrar();
-				}	
-		
-	
-	
+				}
 				for (int i = 1; i < 11; i++){
 					Aficionado aux = pila.extraer();
 					if (aux.getSocio()){
@@ -120,7 +111,6 @@ int main(int argc, char **argv)
 				cola_sim.mostrar();
 				break;
 		}
-	
 	} while (opcion!= 'S');
 	
 	return 0;

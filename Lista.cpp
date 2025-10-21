@@ -9,31 +9,51 @@ Lista::~Lista()
 {
 }
 
-void Lista::insertarOrdenado(Aficionado v){
+void Lista::insertarOrdenado(Aficionado v) {
     pnodoLista nuevo = new NodoLista(v);
     int info = v.getMinutos();
-    if (this->raiz == NULL){
+    bool socio = v.getSocio();
+
+    if (this->raiz == NULL) {
         this->raiz = nuevo;
+        return;
     }
-    else if (info <= raiz->valor.getMinutos()){
-        nuevo->siguiente = raiz;
-        this->raiz = nuevo;
+
+    pnodoLista delante = this->raiz;
+    pnodoLista anterior = NULL;
+
+    if (socio) {
+        
+        while (delante != NULL && delante->valor.getSocio() &&
+               delante->valor.getMinutos() < info) {
+            anterior = delante;
+            delante = delante->siguiente;
+        }
+
+        nuevo->siguiente = delante;
+        if (anterior == NULL)
+            this->raiz = nuevo;
+        else
+            anterior->siguiente = nuevo;
     }
-    else{
-        pnodoLista delante = this->raiz;
-        pnodoLista atras = this->raiz;
-        while(info > delante->valor.getMinutos() && delante->siguiente != NULL){
-            atras = delante;
-            delante = delante-> siguiente;
+    else {
+
+        while (delante != NULL && delante->valor.getSocio()) {
+            anterior = delante;
+            delante = delante->siguiente;
         }
-        if (info > delante->valor.getMinutos()){
-            nuevo->siguiente = NULL;
-            delante->siguiente = nuevo;
+
+        while (delante != NULL && !delante->valor.getSocio() &&
+               delante->valor.getMinutos() < info) {
+            anterior = delante;
+            delante = delante->siguiente;
         }
-        else{
-            atras->siguiente = nuevo;
-            nuevo->siguiente = delante;
-        }
+
+        nuevo->siguiente = delante;
+        if (anterior == NULL)
+            this->raiz = nuevo; 
+        else
+            anterior->siguiente = nuevo;
     }
 }
 
