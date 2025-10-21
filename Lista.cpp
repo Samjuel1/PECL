@@ -22,7 +22,7 @@ void Lista::insertarOrdenado(Aficionado v){
     else{
         pnodoLista delante = this->raiz;
         pnodoLista atras = this->raiz;
-        while(info > raiz->valor.getMinutos() && raiz->siguiente != NULL){
+        while(info > delante->valor.getMinutos() && delante->siguiente != NULL){
             atras = delante;
             delante = delante-> siguiente;
         }

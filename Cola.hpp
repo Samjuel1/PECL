@@ -12,6 +12,7 @@ public:
 	Aficionado eliminar();
 	void mostrar();
 	Aficionado verPrimero();
+    int getLongitud();
 	
 private:
 	pnodoCola primero, ultimo;

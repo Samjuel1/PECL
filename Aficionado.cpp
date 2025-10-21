@@ -40,3 +40,7 @@ bool Aficionado::getSocio(){
 int Aficionado::getId(){
 	return this->id;
 }
+
+int Aficionado::getMinutos(){
+    return this->minutos;
+}

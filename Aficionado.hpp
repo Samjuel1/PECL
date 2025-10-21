@@ -22,6 +22,7 @@ public:
 	void mostrar();
 	bool getSocio();
 	int getId();
+    int getMinutos();
 
 private:
 int id;

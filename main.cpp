@@ -85,8 +85,15 @@ int main(int argc, char **argv)
 				cout << "Vacio" << endl;
 				break;
 			case 'J':
-				lista.insertarOrdenado(cola_sim.eliminar());
-                cout << "se ha completado el comando" << endl;
+                while (cola_soc.getLongitud() > 0){
+                    lista.insertarOrdenado(cola_soc.eliminar());
+                }
+                cout << "se ha completado el comando para la cola de socios" << endl;
+                
+                while (cola_sim.getLongitud() > 0){
+                    lista.insertarOrdenado(cola_sim.eliminar());
+                }
+                cout << "se ha completado el comando para la cola de simpatizantes" << endl;
 				break;
 			case 'K':
 				system("cls");
