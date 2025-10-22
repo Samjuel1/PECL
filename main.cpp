@@ -79,7 +79,7 @@ int main(int argc, char **argv)
 				cout << "Usuarios eliminados de las colas correctamente. " << endl;
 				break;
 			case 'H':
-                cout << "Vacio" << endl;
+                gestor.opcionH(cola_soc, cola_sim, lista);
 				break;
 			case 'I':
 				lista.mostrarLista(); 
