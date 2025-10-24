@@ -89,3 +89,17 @@ void Lista::mostrarUltimoCola(){
     delante->valor.mostrar();
 }
 
+void Lista::eliminar(){
+	pnodoLista nodo;
+	nodo = raiz;
+	if (!nodo){
+		cout << "La lista esta vacia" << endl;
+	}
+	while(raiz != NULL){
+	nodo = raiz;
+	raiz = raiz->siguiente;
+	delete nodo;
+	}
+	cout << "Lista de aficionados eliminada" << endl;
+}
+

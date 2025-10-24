@@ -84,3 +84,19 @@ void Gestor::opcionH(Cola& cola_soc, Cola& cola_sim, Lista& lista){
     cout << "se ha completado el comando para la cola de simpatizantes" << endl;
     lista.mostrarLista();
 }
+
+void Gestor::opcionI(Lista& lista){
+	lista.mostrarLista(); //borrar
+	lista.eliminar();
+	lista.mostrarLista(); //borrar
+}
+
+void Gestor::opcionJ(Lista& lista){
+	lista.mostrarPrimero();
+	lista.mostrarUltimoSoc();
+	lista.mostrarUltimoCola();
+}
+
+void Gestor::opcionK(Lista& lista){
+	lista.mostrarLista();
+}

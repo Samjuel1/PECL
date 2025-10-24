@@ -13,6 +13,7 @@ public:
     void mostrarPrimero();
     void mostrarUltimoSoc();
     void mostrarUltimoCola();
+	void eliminar();
     
 private:
     pnodoLista raiz;

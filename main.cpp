@@ -56,16 +56,19 @@ int main(int argc, char **argv)
                 gestor.opcionH(cola_soc, cola_sim, lista);
 				break;
 			case 'I':
-				lista.mostrarLista(); 
+				gestor.opcionI(lista);
 				break;
 			case 'J':
-                lista.mostrarPrimero();
-                lista.mostrarUltimoSoc();
-                lista.mostrarUltimoCola();
+                gestor.opcionJ(lista);
 				break;
 			case 'K':
+				gestor.opcionK(lista);
+				break;
+			case 'L':
 				system("cls");
 				break;
+				
+			
 		}
 	} while (opcion!= 'S');
 	

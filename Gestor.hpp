@@ -24,6 +24,9 @@ public:
     void opcionE_F(Cola& cola, string texto);
     void opcionG(Cola& cola_soc, Cola& cola_sim);
     void opcionH(Cola& cola_soc, Cola& cola_sim, Lista& lista);
+	void opcionI(Lista& lista);
+	void opcionJ(Lista& lista);
+	void opcionK(Lista& lista);
 	
 
 };
