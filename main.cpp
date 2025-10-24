@@ -38,45 +38,19 @@ int main(int argc, char **argv)
 				gestor.opcionB(pila);
 				break;
 			case 'C':
-				while (pila.extraer().getId() != 0){
-					continue;
-					}
-				cout << "Usuarios eliminados de la pila correctamente. " << endl;
+                gestor.opcionC(pila);
 				break;
 			case 'D':
-            /*
-				for (int i = 1; i < 11; i++){
-					Aficionado aux = pila.extraer();
-					if (aux.getSocio()){
-						cola_soc.insertar(aux);
-					} 
-					else{
-						cola_sim.insertar(aux);
-					}
-				}
-				cout << "Se han insertado los elementos en la cola correctamente. " << endl;
-                 */
                  gestor.opcionD(cola_soc, cola_sim, pila);
 				break;
 			case 'E':
-            /*
-				cout << "El contenido de la cola de socios es: " << endl;
-				cola_soc.mostrar();
-                 */
                  gestor.opcionE_F(cola_soc, "socio");
 				break;
 			case 'F':
-            /*
-				cout << "El contenido de la cola de simpatizantes es: " << endl;
-				cola_sim.mostrar();
-                 */
                  gestor.opcionE_F(cola_sim, "simpatizante");
 				break;
 			case 'G':
-				while (cola_soc.eliminar().getId() != 0 || cola_sim.eliminar().getId() != 0){
-					continue;
-				}
-				cout << "Usuarios eliminados de las colas correctamente. " << endl;
+				gestor.opcionG(cola_soc, cola_sim);
 				break;
 			case 'H':
                 gestor.opcionH(cola_soc, cola_sim, lista);
@@ -89,26 +63,6 @@ int main(int argc, char **argv)
 				break;
 			case 'K':
 				system("cls");
-				break;
-			case 'N':
-				for(int i = 1; i < 11; i++){
-					pila.insertar(i - 1);
-					pila.mostrar();
-				}
-				for (int i = 1; i < 11; i++){
-					Aficionado aux = pila.extraer();
-					if (aux.getSocio()){
-						cola_soc.insertar(aux);
-					} 
-					else{
-						cola_sim.insertar(aux);
-					}
-				}
-				cout << endl;
-				cout << "El contenido de la cola de socios es: " << endl;
-				cola_soc.mostrar();
-				cout << "El contenido de la cola de simpatizantes es: " << endl;
-				cola_sim.mostrar();
 				break;
 		}
 	} while (opcion!= 'S');

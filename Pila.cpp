@@ -47,12 +47,18 @@ Aficionado Pila::cima()
 void Pila::mostrar()
 {
 	pnodoPila aux = ultimo;
-	cout << "El contenido de la pila es: " << endl;
-	while(aux){
-		aux->valor.mostrar();
-		aux = aux->siguiente;
-	}
-	cout << endl;
+    cout << endl;
+    if (!ultimo){
+        cout << "La pila esta vacia" << endl;
+    }
+    else{
+        cout << "El contenido de la pila es: " << endl;
+        while(aux){
+            aux->valor.mostrar();
+            aux = aux->siguiente;
+        }
+        cout << endl;
+    }
 }
 
 int Pila::getLongitud()

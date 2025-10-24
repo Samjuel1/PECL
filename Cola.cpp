@@ -22,13 +22,13 @@ void Cola::insertar(Aficionado v)
 void Cola::mostrar()
 {
 	pnodoCola aux = primero;
-	cout << endl;
-	while(aux) {
-		aux->valor.mostrar();
-		aux = aux->siguiente;
-	}
-	cout << endl;
+    while(aux) {
+        aux->valor.mostrar();
+        aux = aux->siguiente;
+    }
+    cout << endl;
 }
+
 Aficionado Cola::eliminar()
 {
 	pnodoCola nodo;

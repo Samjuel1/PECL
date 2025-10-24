@@ -19,8 +19,10 @@ public:
 	void determinarCola(Aficionado v, Cola cola_soc, Cola cola_sim);
     void opcionA(Pila& pila);
     void opcionB(Pila& pila);
+    void opcionC(Pila& pila);
     void opcionD(Cola& cola_soc, Cola& cola_sim, Pila& pila);
     void opcionE_F(Cola& cola, string texto);
+    void opcionG(Cola& cola_soc, Cola& cola_sim);
     void opcionH(Cola& cola_soc, Cola& cola_sim, Lista& lista);
 	
 
