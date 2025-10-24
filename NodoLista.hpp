@@ -9,6 +9,7 @@ class NodoLista
 public:
 	NodoLista(Aficionado v, NodoLista* sig = NULL);
 	~NodoLista();
+    Aficionado getValor();
 private:
     Aficionado valor;
     NodoLista* siguiente;

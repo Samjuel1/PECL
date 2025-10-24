@@ -67,6 +67,25 @@ void Lista::mostrarLista(){
 	cout << endl;
 }
 
+void Lista::mostrarPrimero(){
+    this->raiz->valor.mostrar();
+}
+void Lista::mostrarUltimoSoc(){
+    pnodoLista delante = this->raiz;
+    pnodoLista anterior = NULL;
+    while (delante != NULL && delante->valor.getSocio()) {
+            anterior = delante;
+            delante = delante->siguiente;
+    }
+    anterior->valor.mostrar();
+    delante->valor.mostrar();
+}
 
-
+void Lista::mostrarUltimoCola(){
+    pnodoLista delante = this->raiz;
+    while (delante->siguiente != NULL){
+        delante = delante->siguiente;
+    }
+    delante->valor.mostrar();
+}
 

@@ -10,3 +10,6 @@ NodoLista::~NodoLista()
 {
 }
 
+Aficionado NodoLista::getValor(){
+    return this->valor;
+}

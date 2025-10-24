@@ -10,6 +10,9 @@ public:
 	~Lista();
     void insertarOrdenado(Aficionado v);
     void mostrarLista();
+    void mostrarPrimero();
+    void mostrarUltimoSoc();
+    void mostrarUltimoCola();
     
 private:
     pnodoLista raiz;

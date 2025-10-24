@@ -59,7 +59,9 @@ int main(int argc, char **argv)
 				lista.mostrarLista(); 
 				break;
 			case 'J':
-                cout << "Vacio" << endl;
+                lista.mostrarPrimero();
+                lista.mostrarUltimoSoc();
+                lista.mostrarUltimoCola();
 				break;
 			case 'K':
 				system("cls");
