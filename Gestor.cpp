@@ -86,9 +86,7 @@ void Gestor::opcionH(Cola& cola_soc, Cola& cola_sim, Lista& lista){
 }
 
 void Gestor::opcionI(Lista& lista){
-	lista.mostrarLista(); //borrar
 	lista.eliminar();
-	lista.mostrarLista(); //borrar
 }
 
 void Gestor::opcionJ(Lista& lista){
