@@ -9,8 +9,8 @@ Pila::Pila()
 void Pila::insertar(Aficionado v)
 {
 	Aficionado nuevoAficionado(v);
-	cout << "Nuevo aficionado: ";  //Lineas para quitar
-    nuevoAficionado.mostrar();     //
+	/*cout << "Nuevo aficionado: ";
+	nuevoAficionado.mostrar();*/
 	pnodoPila nuevo = new NodoPila(nuevoAficionado,ultimo);
 	ultimo = nuevo;
 	longitud++;
@@ -28,8 +28,8 @@ Aficionado Pila::extraer()
 	ultimo = nodo->siguiente;
 	v = nodo -> valor;
 	longitud--;
-	cout << "Se ha extraido a: ";
-	v.mostrar();
+    /*cout << "Se ha extraido a: ";
+	v.mostrar();*/
 	delete nodo;
 	return v;
 }
