@@ -28,7 +28,7 @@ bool Aficionado::comprobarSocio(int id){
 	}
 
 void Aficionado::mostrar(){
-	cout << "ID: " << this->id 
+	cout << "\t\tID: " << this->id 
 	<< ". Minuto: " << this->minutos
 	<< ". Socio: " << (this->socio ? "Si. " : "No. ") << endl;
 	}
