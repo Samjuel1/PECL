@@ -13,9 +13,7 @@ using namespace std;
 
 int main(int argc, char **argv)
 { 
-	
 	char opcion;
-
 	Pila pila;
 	Cola cola_soc;
 	Cola cola_sim;
@@ -24,7 +22,6 @@ int main(int argc, char **argv)
 	srand(time(0));
 	
 	do{
-		
 		cout << "\n\t--------------------------------------------------------------"
 				"--------\n";
 		cout << "\tAficionados en la pila -> \n\t";  gestor.opcionB(pila);
@@ -49,15 +46,14 @@ int main(int argc, char **argv)
 				"el ultimo socio, el primer simpatizante y "
 				"el ultimo Aficionado que \n\tacceden al estadio.\n";
 		cout << "\tJ. Reiniciar el programa.\n";
+		cout << "\tK. Mostrar los aficionados en la lista. \n";
+		cout << "\tL. Limpiar el contenido de la terminal. \n";
+		cout << "\tS. Salir del programa. \n";
 		cout << endl;
-		
-		
 		cout << "Indique la opcion deseada: " << endl;
 		cin >> opcion;
 		cout << endl;
 		opcion = toupper(opcion);
-		
-		
 		
 		switch (opcion){
 			case 'A':
@@ -90,19 +86,15 @@ int main(int argc, char **argv)
 				gestor.opcionI(lista);
 				break;
 			case 'J':
-                gestor.opcionJ(lista);
+                gestor.opcionJ(lista, cola_soc, cola_sim, pila);
 				break;
 			case 'K':
 				gestor.opcionK(lista);
 				break;
 			case 'L':
-				system("cls");
+				gestor.opcionL();
 				break;
-				
-			
 		}
 	} while (opcion!= 'S');
-	
 	return 0;
-	
 }

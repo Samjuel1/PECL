@@ -86,15 +86,28 @@ void Gestor::opcionH(Cola& cola_soc, Cola& cola_sim, Lista& lista){
 }
 
 void Gestor::opcionI(Lista& lista){
-	lista.eliminar();
-}
-
-void Gestor::opcionJ(Lista& lista){
 	lista.mostrarPrimero();
 	lista.mostrarUltimoSoc();
 	lista.mostrarUltimoCola();
 }
 
+void Gestor::opcionJ(Lista& lista, Cola& cola_soc, Cola& cola_sim, Pila& pila){
+	lista.eliminar();
+	while (cola_soc.eliminar().getId() != 0){
+		continue;
+	}
+	while (cola_sim.eliminar().getId() != 0){
+		continue;
+	}
+	while (pila.extraer().getId() != 0){
+		continue;
+	}
+}
+
 void Gestor::opcionK(Lista& lista){
 	lista.mostrarLista();
+}
+
+void Gestor::opcionL(){
+	system("cls");
 }

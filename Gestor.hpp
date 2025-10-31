@@ -25,8 +25,9 @@ public:
     void opcionG(Cola& cola_soc, Cola& cola_sim);
     void opcionH(Cola& cola_soc, Cola& cola_sim, Lista& lista);
 	void opcionI(Lista& lista);
-	void opcionJ(Lista& lista);
+	void opcionJ(Lista& lista, Cola& cola_soc, Cola& cola_sim, Pila& pila);
 	void opcionK(Lista& lista);
+	void opcionL();
 	
 
 };
