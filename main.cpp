@@ -24,11 +24,11 @@ int main(int argc, char **argv)
 	do{
 		cout << "\n\t--------------------------------------------------------------"
 				"--------\n";
-		cout << "\tAficionados en la pila -> \n\t";  gestor.opcionB(pila);
-		cout << "\n\tAficionados en las colas:\n \tSocios-> "; gestor.opcionE_F(cola_soc, "socio"); cout << "\tSimpatizantes-> ";
-				gestor.opcionE_F(cola_sim, "simpatizante");
-		cout << "\n\tAficionados en la lista -> " << endl;;  /*gestor.AficionadosEnLista()*/
-		cout << "\n\tAficionados en el arbol -> ";							  /*gestor.AficionadosEnArbol()*/
+		cout << "\tAficionados en la pila ->  " <<  pila.getLongitud();
+		cout << "\n\n\tAficionados en las colas:\n \tSocios-> " << cola_soc.getLongitud(); cout << "\n\tSimpatizantes-> " <<
+				cola_sim.getLongitud();
+		cout << "\n\n\tAficionados en la lista -> " << lista.getLongitud();;  /*gestor.AficionadosEnLista()*/
+		cout << "\n\tAficionados en el arbol -> " << 0;							  /*gestor.AficionadosEnArbol()*/
 		cout << "\n";
 		cout << "\t----------------------------------------------------------------"
 				"------\n\n";
@@ -44,7 +44,7 @@ int main(int argc, char **argv)
 		cout << "\tH. Simular la entrada de los Aficionados a la lista.\n";
 		cout << "\tI. Buscar en la lista el primer Aficionado, "
 				"el ultimo socio, el primer simpatizante y "
-				"el ultimo Aficionado que \n\tacceden al estadio.\n";
+				"el ultimo Aficionado que \n\t   acceden al estadio.\n";
 		cout << "\tJ. Reiniciar el programa.\n";
 		cout << "\tK. Mostrar los aficionados en la lista. \n";
 		cout << "\tL. Limpiar el contenido de la terminal. \n";
