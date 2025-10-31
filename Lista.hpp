@@ -14,6 +14,7 @@ public:
     void mostrarUltimoSoc();
     void mostrarUltimoCola();
 	void eliminar();
+    int getLongitud();
     
 private:
     pnodoLista raiz;

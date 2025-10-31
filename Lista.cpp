@@ -156,3 +156,13 @@ void Lista::eliminar(){
 	cout << "Lista de aficionados eliminada" << endl;
 }
 
+int Lista::getLongitud(){
+    pnodoLista delante = this->raiz;
+    int longitud = 0;
+    while (delante != NULL){
+        delante = delante->siguiente;
+        longitud += 1;
+    }
+    return longitud;
+}
+
